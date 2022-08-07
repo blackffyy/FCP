@@ -1,10 +1,8 @@
- #
 # Test functions for odesolve
 #
 # The tests here check that the functions defined in odesolve.py produce the
 # right outputs. To run the tests make sure that odesolve.py and this file
 # test_odesolve.py are in the same directory and then run this file.
-#
 
 import numpy as np
 from odesolve import euler, rk4, solveto, odesolve
