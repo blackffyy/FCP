@@ -8,19 +8,19 @@
 # tests in test_odesolve.py
 
 def euler(f, x, t, h):
-    """Perform one step of the Euler method"""
-#Eular Method    
-    return x + f (x , t )*h
+    """Perform one step of the Euler method"""#Eular Method
+    return x + f (x , t )*h #functionof the Euler method
     pass
 
 
 def rk4(f, x, t, h):
-    """Perform one step of the RK$ method"""
+    """Perform one step of the RK4 method"""#RK4 method
+#Four step fot the RK4:
     k1 = f(x,t)
     k2 = f(x+k1*(h/2),t+(h/2)) 
     k3 = f(x+k2*(h/2),t+(h/2)) 
     k4 = f(x+k3*h,t+h)
-    return x + ( k1 + 2*k2 + 2*k3 + k4 ) * h/6
+    return x + ( k1 + 2*k2 + 2*k3 + k4 ) * h/6#output function
     pass
 
 
@@ -49,4 +49,16 @@ def solveto(f, x1, t1, t2, hmax, method=euler):
 
 def odesolve(f, X0, t, hmax, method=euler):
     """Compute the solution at different values of t"""
+    import numpy as np
+    t0 = t[0]
+    YMSB = []
+    try:
+        Damon = X0[1]
+    except:
+        X0 = X0[0]
+    for i in t:
+        SBHY = solveto(f, X0, t0, i, hmax, method)
+        YMSB.append(SBHY)
+    YMSB = np.array(YMSB)
+    return YMSB    
     pass
