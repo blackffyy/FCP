@@ -1,5 +1,4 @@
 # odesolve.py
-#
 # Author: <insert name>
 # Date:   <insert date>
 # Description: <insert description>
