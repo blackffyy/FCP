@@ -20,7 +20,8 @@ def rk4(f, x, t, h):
     k2 = f(x+k1*(h/2),t+(h/2)) 
     k3 = f(x+k2*(h/2),t+(h/2)) 
     k4 = f(x+k3*h,t+h)
-    return x + ( k1 + 2*k2 + 2*k3 + k4 ) * h/6#output function
+    return x + ( k1 + 2*k2 + 2*k3 + k4 ) * h/6
+#output function final step for the RK4
     pass
 
 
@@ -28,6 +29,7 @@ def solveto(f, x1, t1, t2, hmax, method=euler):
     """Use many steps of method to get from x1,t1 to x2,t2"""
     loop = (t2 - t1)/hmax 
     loop = int(round(loop))
+#Set up a loop 
     Damonsb = x1
     t = t1
     for i in range(0,loop):
@@ -37,6 +39,9 @@ def solveto(f, x1, t1, t2, hmax, method=euler):
             Damonsb = euler(f, Damonsb, t, hmax) 
         t = t+hmax  
     if t != t2:
+#If the final result is a fractional number rather than an integer
+#Add t to the fractional number and bring it back into the equation to calculate it
+#Until that the final result is an integer
         hmax = t2 - t
         if method == rk4:
             Damonsb = rk4(f, Damonsb, t, hmax)
