@@ -51,14 +51,14 @@ def odesolve(f, X0, t, hmax, method=euler):
     """Compute the solution at different values of t"""
     import numpy as np
     t0 = t[0]
-    YM = []
+    YMY = []
     try:
         Damon = X0[1]
     except:
         X0 = X0[0]
     for i in t:
         SBHY = solveto(f, X0, t0, i, hmax, method)
-        YM.append(SBHY)
-    YM = np.array(YM)
-    return YM  
+        YMY.append(SBHY)
+    YMY = np.array(YMY)
+    return YMY 
     pass
