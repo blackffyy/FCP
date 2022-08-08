@@ -1,6 +1,8 @@
+# All part of function, test pass 6 out of 6 and also pass error test
 # odesolve.py
-# Author: <insert name>
-# Date:   <insert date>
+# Author: <YAO FENG>
+# Student number: 2165406
+# Date:   <7/8/2022>
 # Description: <insert description>
 # You should fill out the code for the functions below so that they pass the
 # tests in test_odesolve.py
