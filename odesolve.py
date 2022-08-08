@@ -89,7 +89,7 @@ plt.xscale("log")
 plt.yscale("log")
 #Setting the x axes and y axes
 plt.xlabel("h")
-plt.ylim(0.000000000000001,0.1)
+plt.ylim(0.000000000000001,0.1)#set up the range of y axes 
 plt.ylabel("error")
 plt.legend()
 #title
