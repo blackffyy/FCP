@@ -64,7 +64,6 @@ def odesolve(f, X0, t, hmax, method=euler):
     YMY = np.array(YMY)
     return YMY 
     pass
-
 #test error
 import numpy as np
 import matplotlib.pyplot as plt
