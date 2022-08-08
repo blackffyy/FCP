@@ -71,6 +71,7 @@ def odesolve(f, X0, t, hmax, method=euler):
 import numpy as np
 import matplotlib.pyplot as plt
 from odesolve import solveto, euler, rk4
+
 def f(x, t):
     return x
 x0 = 1
@@ -90,6 +91,7 @@ plt.xscale("log")
 plt.yscale("log")
 #Setting the x axes and y axes
 plt.xlabel("h")
+plt.ylim(0.000000000000001,0.1)
 plt.ylabel("error")
 plt.legend()
 #title
