@@ -49,7 +49,6 @@ def solveto(f, x1, t1, t2, hmax, method=euler):
     return Damonsb
     pass
 
-
 def odesolve(f, X0, t, hmax, method=euler):
     """Compute the solution at different values of t"""
     import numpy as np
