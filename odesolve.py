@@ -6,7 +6,6 @@
 # Description: <insert description>
 # You should fill out the code for the functions below so that they pass the
 # tests in test_odesolve.py
-
 def euler(f, x, t, h):
     """Perform one step of the Euler method"""#Eular Method
     return x + f (x , t )*h #functionof the Euler method
