@@ -2,7 +2,6 @@
 # Author: <insert name>
 # Date:   <insert date>
 # Description: <insert description>
-#
 # You should fill out the code for the functions below so that they pass the
 # tests in test_odesolve.py
 
